@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <style>
+      .bar {
+        fill: steelblue;
+      }
+    </style>
+  </head>
+  <body>
+    <svg width="500" height="300"></svg>
+    <script>
+      const data = [102, 105, 142, 95, 66, 199];
+      const svg = d3.select("svg");
+      const barWidth = 500 / data.length;
+      const bar = svg
+        .selectAll("rect")
+        .data(data)
+        .enter()
+        .append("rect")
+        .attr("y", (d) => 300 - d)
+        .attr("height", (d) => d)
+        .attr("width", barWidth - 2)
+        .attr("transform", (d, i) => `translate(${i * barWidth},0)`)
+        .attr("class", "bar");
+    </script>
+  </body>
+</html>

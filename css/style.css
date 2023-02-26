@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  text-align: center;
+  font-size: 3em;
+  background-color: #606163;
+  color: #bbb;
+}
+body p {
+  text-align: left;
+}
+svg {
+  background-color: #efefef;
+  border: 2px dotted #404099;
+  margin: 18px;
+  box-shadow: 4px 4px 8px #040404;
+}
